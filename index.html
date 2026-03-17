@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emanuele Di Paola — Architecture</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <a href="#" class="nav-logo">EDP</a>
+    <ul class="nav-links">
+      <li><a href="#work" class="nav-link">Work</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <canvas id="bg-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-label">
+        <span class="mono">Portfolio — 2025</span>
+      </div>
+      <h1 class="hero-name">
+        <span class="line-wrap"><span class="line">EMANUELE</span></span>
+        <span class="line-wrap"><span class="line">DI PAOLA</span></span>
+      </h1>
+      <div class="hero-sub">
+        <p>Architecture &mdash; SCI-Arc BArch&nbsp;2027</p>
+        <p>Los Angeles, CA</p>
+      </div>
+    </div>
+    <div class="hero-diagram">
+      <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="diagram-svg">
+        <circle cx="200" cy="200" r="160" stroke="white" stroke-width="0.4" stroke-dasharray="2 6" opacity="0.3"/>
+        <circle cx="200" cy="200" r="100" stroke="white" stroke-width="0.4" stroke-dasharray="2 6" opacity="0.25"/>
+        <circle cx="200" cy="200" r="50" stroke="white" stroke-width="0.4" opacity="0.2"/>
+        <line x1="0" y1="200" x2="400" y2="200" stroke="white" stroke-width="0.4" opacity="0.15"/>
+        <line x1="200" y1="0" x2="200" y2="400" stroke="white" stroke-width="0.4" opacity="0.15"/>
+        <line x1="87" y1="87" x2="313" y2="313" stroke="white" stroke-width="0.4" opacity="0.1"/>
+        <line x1="313" y1="87" x2="87" y2="313" stroke="white" stroke-width="0.4" opacity="0.1"/>
+        <circle cx="200" cy="200" r="3" fill="white" opacity="0.6"/>
+        <circle cx="200" cy="100" r="1.5" fill="white" opacity="0.4"/>
+        <circle cx="300" cy="200" r="1.5" fill="white" opacity="0.4"/>
+        <text x="204" y="104" fill="white" font-size="8" font-family="Space Mono" opacity="0.4">+</text>
+        <text x="304" y="204" fill="white" font-size="8" font-family="Space Mono" opacity="0.4">+</text>
+      </svg>
+    </div>
+    <div class="hero-scroll">
+      <span class="mono">Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Selected Work -->
+  <section id="work">
+    <div class="section-header">
+      <span class="mono section-label">Selected Work</span>
+      <span class="mono section-count">05 Projects</span>
+    </div>
+
+    <div class="projects-list">
+
+      <!-- Project 01 -->
+      <article class="project-item" id="project-01" data-href="project-01.html">
+        <div class="project-number mono">01</div>
+        <div class="project-info">
+          <h2 class="project-title">"Yovie" Cultural Center</h2>
+          <p class="project-meta mono">Vienna, Austria &mdash; 2025</p>
+          <p class="project-desc">A performance hall that breaks its container, making structure and movement part of the performance. A cultural center in the heart of Vienna designed to host performance, exhibition, and communal gathering — redefining urban presence through layered transparency, circulation, and spatial performance.</p>
+          <div class="project-tags">
+            <span class="tag">Cultural</span>
+            <span class="tag">Performance</span>
+            <span class="tag">Urban</span>
+          </div>
+          <a href="project-01.html" class="project-view-link mono">View Project →</a>
+        </div>
+        <div class="project-image-wrap">
+          <div class="project-image project-image-01">
+            <div class="image-overlay"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 02 -->
+      <article class="project-item" id="project-02" data-href="project-02.html">
+        <div class="project-number mono">02</div>
+        <div class="project-info">
+          <h2 class="project-title">Spiral Staircase</h2>
+          <p class="project-meta mono">Details Details — Instructor: Dwayne Oyler</p>
+          <p class="project-desc">A study in structure and flow. A diagonally cut eggcrate system creates this sculptural staircase, revealing structure through sectional geometry. Explores the relationship between load transfer and spatial rhythm through a continuous folded steel spine and suspended acrylic treads.</p>
+          <div class="project-tags">
+            <span class="tag">Detail</span>
+            <span class="tag">Fabrication</span>
+            <span class="tag">Structure</span>
+          </div>
+          <a href="project-02.html" class="project-view-link mono">View Project →</a>
+        </div>
+        <div class="project-image-wrap">
+          <div class="project-image project-image-02">
+            <div class="image-overlay"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 03 -->
+      <article class="project-item" id="project-03" data-href="project-03.html">
+        <div class="project-number mono">03</div>
+        <div class="project-info">
+          <h2 class="project-title">SCI-Arc Extension</h2>
+          <p class="project-meta mono">Los Angeles, CA &mdash; 2024</p>
+          <p class="project-desc">A proposal for a SCI-Arc Extension based on conceptual understanding of program assemblies. The proposal is not an addition but a duplication — the spaces at SCI-Arc that actually work were identified and reproduced as a mirrored twin typology connecting through Keck Hall.</p>
+          <div class="project-tags">
+            <span class="tag">Institutional</span>
+            <span class="tag">Urban</span>
+            <span class="tag">Program</span>
+          </div>
+          <a href="project-03.html" class="project-view-link mono">View Project →</a>
+        </div>
+        <div class="project-image-wrap">
+          <div class="project-image project-image-03">
+            <div class="image-overlay"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 04 -->
+      <article class="project-item" id="project-04" data-href="project-04.html">
+        <div class="project-number mono">04</div>
+        <div class="project-info">
+          <h2 class="project-title">Lymphtonic</h2>
+          <p class="project-meta mono">Downtown Los Angeles &mdash; 2024</p>
+          <p class="project-desc">A self-healing building powered by algae that adapts to its environment. Fitness and data infrastructure share the same metabolic logic: both generate heat, require controlled atmosphere, and depend on continuous circulatory flow. The section forces them into a single structural frame where their shared biology becomes the architecture.</p>
+          <div class="project-tags">
+            <span class="tag">Speculative</span>
+            <span class="tag">Mixed-Use</span>
+            <span class="tag">Film</span>
+          </div>
+          <a href="project-04.html" class="project-view-link mono">View Project →</a>
+        </div>
+        <div class="project-image-wrap">
+          <div class="project-image project-image-04">
+            <div class="image-overlay"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 05 -->
+      <article class="project-item" id="project-05" data-href="project-05.html">
+        <div class="project-number mono">05</div>
+        <div class="project-info">
+          <h2 class="project-title">Future Ruins</h2>
+          <p class="project-meta mono">2B Visual Studies &mdash; Sao Paulo</p>
+          <p class="project-desc">A short film depicting a hypothetical post-apocalyptic environment focused on the MASP museum in Sao Paulo. The ruin is not accidental but designed — every element of decay was choreographed to reveal how the building would fail. The structural skeleton remains partially intact, reclaimed by overgrowth.</p>
+          <div class="project-tags">
+            <span class="tag">Film</span>
+            <span class="tag">Speculative</span>
+            <span class="tag">Visualization</span>
+          </div>
+          <a href="project-05.html" class="project-view-link mono">View Project →</a>
+        </div>
+        <div class="project-image-wrap">
+          <div class="project-image project-image-05">
+            <div class="image-overlay"></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="section-header">
+      <span class="mono section-label">About</span>
+    </div>
+    <div class="about-grid">
+      <div class="about-bio">
+        <p class="about-text">Emanuele Di Paola is an architecture student at SCI-Arc in Los Angeles, pursuing a BArch degree (2022–2027). His work spans cultural centers, institutional buildings, speculative structures, and short films — always exploring the relationship between structure, movement, and spatial experience.</p>
+        <p class="about-text">He brings a multidisciplinary approach combining computational design, physical model-making, and digital fabrication. His practice bridges rigorous technical development with conceptual depth.</p>
+        <div class="about-contact-inline">
+          <a href="mailto:emanuele_dp@sciarc.edu" class="about-email">emanuele_dp@sciarc.edu</a>
+        </div>
+      </div>
+      <div class="about-columns">
+        <div class="about-col">
+          <h3 class="col-title mono">Experience</h3>
+          <ul class="cv-list">
+            <li class="cv-item">
+              <span class="cv-title">SCI-Arc Planet City Exhibition</span>
+              <span class="cv-meta mono">2026 — Liam Young</span>
+            </li>
+            <li class="cv-item">
+              <span class="cv-title">Teaching Assistant, Work-Study Studio</span>
+              <span class="cv-meta mono">2026 Fall — SCI-Arc</span>
+            </li>
+            <li class="cv-item">
+              <span class="cv-title">Summer Intern</span>
+              <span class="cv-meta mono">2025 — ROTO Architects</span>
+            </li>
+            <li class="cv-item">
+              <span class="cv-title">Spring Show Participant</span>
+              <span class="cv-meta mono">2025 — SCI-Arc</span>
+            </li>
+            <li class="cv-item">
+              <span class="cv-title">Class Representative, SCI-Arc STUN</span>
+              <span class="cv-meta mono">2023 – Present</span>
+            </li>
+          </ul>
+        </div>
+        <div class="about-col">
+          <h3 class="col-title mono">Education</h3>
+          <ul class="cv-list">
+            <li class="cv-item">
+              <span class="cv-title">BArch</span>
+              <span class="cv-meta mono">2022–2027 — SCI-Arc, Los Angeles</span>
+            </li>
+            <li class="cv-item">
+              <span class="cv-title">Business &amp; Management</span>
+              <span class="cv-meta mono">2021–2022 — American University of Rome</span>
+            </li>
+            <li class="cv-item">
+              <span class="cv-title">SAT Course</span>
+              <span class="cv-meta mono">2020–2021 — Princeton University</span>
+            </li>
+            <li class="cv-item">
+              <span class="cv-title">High School</span>
+              <span class="cv-meta mono">2017–2021 — American Overseas School of Rome</span>
+            </li>
+          </ul>
+          <h3 class="col-title mono" style="margin-top: 2.5rem;">Awards</h3>
+          <ul class="cv-list">
+            <li class="cv-item">
+              <span class="cv-title">SCI-Arc Gala / Thomas Heatherwick Award</span>
+              <span class="cv-meta mono">2025 — Selected Model</span>
+            </li>
+            <li class="cv-item">
+              <span class="cv-title">SCI-Arc Continuing Student Scholarship</span>
+              <span class="cv-meta mono">2024–2026</span>
+            </li>
+            <li class="cv-item">
+              <span class="cv-title">ROTO-Architects Scholarship</span>
+              <span class="cv-meta mono">2025</span>
+            </li>
+          </ul>
+        </div>
+        <div class="about-col">
+          <h3 class="col-title mono">Tools</h3>
+          <div class="skills-grid">
+            <span class="skill">Rhino</span>
+            <span class="skill">Grasshopper</span>
+            <span class="skill">Revit</span>
+            <span class="skill">ZBrush</span>
+            <span class="skill">Blender</span>
+            <span class="skill">Houdini</span>
+            <span class="skill">Unreal Engine</span>
+            <span class="skill">Twinmotion</span>
+            <span class="skill">V-Ray</span>
+            <span class="skill">Enscape</span>
+            <span class="skill">TouchDesigner</span>
+            <span class="skill">Arduino</span>
+            <span class="skill">Adobe Suite</span>
+            <span class="skill">AutoCAD</span>
+            <span class="skill">D-5</span>
+            <span class="skill">3D Printing</span>
+            <span class="skill">SketchUp</span>
+            <span class="skill">Keyshot</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="contact-inner">
+      <span class="mono section-label">Get in touch</span>
+      <h2 class="contact-heading">Let's work<br/>together.</h2>
+      <div class="contact-links">
+        <a href="mailto:emanuele_dp@sciarc.edu" class="contact-link">
+          <span class="contact-link-label mono">Email</span>
+          <span class="contact-link-value">emanuele_dp@sciarc.edu</span>
+          <span class="contact-link-arrow">↗</span>
+        </a>
+        <a href="tel:+12133342322" class="contact-link">
+          <span class="contact-link-label mono">Phone</span>
+          <span class="contact-link-value">+1 (213) 334-2322</span>
+          <span class="contact-link-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+    <footer class="footer">
+      <span class="mono footer-copy">© 2025 Emanuele Di Paola</span>
+      <span class="mono footer-school">SCI-Arc BArch 2027 — Los Angeles</span>
+    </footer>
+  </section>
+
+  <script src="particles.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
