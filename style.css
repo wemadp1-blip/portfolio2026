@@ -411,23 +411,23 @@ section {
 
 /* Project thumbnail images */
 .project-image-01 {
-  background-image: url('Links%20copy/DSC_3353.jpg');
+  background-image: url('images/project-01/model/DSC_3353.jpg');
 }
 
 .project-image-02 {
-  background-image: url('Links%20copy/DSC_3821.jpg');
+  background-image: url('images/project-02/model/DSC_3821.jpg');
 }
 
 .project-image-03 {
-  background-image: url('Links%20copy/DSC_7795.jpg');
+  background-image: url('images/project-03/model/DSC_7795.jpg');
 }
 
 .project-image-04 {
-  background-image: url('Links%20copy/HighresScreenshot00003.png');
+  background-image: url('images/project-04/renders/image1.jpg');
 }
 
 .project-image-05 {
-  background-image: url('Links%20copy/Screenshot%202024-05-03%20000449.png');
+  background-image: url('images/project-05/renders/Future_Ruins_Student.0216.png');
 }
 
 /* ─── About ─────────────────────────────────────────────────────────────────── */
@@ -614,6 +614,142 @@ section {
   to   { opacity: 1; }
 }
 
+/* ─── Micro Graphics ────────────────────────────────────────────────────────── */
+
+/* Project item — top-left L bracket */
+.project-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 10px; height: 10px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  border-left: 1px solid rgba(255,255,255,0.12);
+  pointer-events: none;
+  transition: border-color 0.4s ease;
+}
+.project-item:hover::before { border-color: rgba(255,255,255,0.32); }
+
+/* Project image — top-right L bracket */
+.project-image-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 10px; height: 10px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  border-right: 1px solid rgba(255,255,255,0.2);
+  z-index: 3;
+  pointer-events: none;
+  transition: border-color 0.4s ease;
+}
+.project-item:hover .project-image-wrap::after { border-color: rgba(255,255,255,0.5); }
+
+/* Hero coordinate tag — top right */
+.mg-coord {
+  position: absolute;
+  top: 5.8rem; right: 3rem;
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.16);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  animation: fadeIn 1.5s ease 1.3s forwards;
+  line-height: 2;
+  text-align: right;
+}
+
+/* Hero vertical measurement column — right edge */
+.mg-measure {
+  position: absolute;
+  right: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  animation: fadeIn 1.5s ease 1.5s forwards;
+}
+.mg-tick {
+  width: 7px;
+  height: 1px;
+  background: rgba(255,255,255,0.18);
+}
+.mg-vline {
+  width: 1px;
+  height: 55px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+}
+.mg-mlabel {
+  font-family: var(--font-mono);
+  font-size: 0.46rem;
+  letter-spacing: 0.14em;
+  color: rgba(255,255,255,0.14);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin: 6px 0;
+}
+
+/* North arrow */
+.mg-north {
+  position: absolute;
+  bottom: 4rem; right: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  animation: fadeIn 1.5s ease 1.7s forwards;
+}
+.mg-north-label {
+  font-family: var(--font-mono);
+  font-size: 0.46rem;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.16);
+}
+
+/* About annotation strip */
+.mg-about-ann {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+.mg-ann-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  flex-shrink: 0;
+}
+.mg-ann-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.07);
+}
+.mg-ann-text {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.14em;
+  color: rgba(255,255,255,0.16);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Section header tick */
+.mg-section-tick {
+  width: 1px;
+  height: 10px;
+  background: rgba(255,255,255,0.15);
+  align-self: flex-end;
+}
+
 /* ─── Responsive ────────────────────────────────────────────────────────────── */
 
 /* ── Tablet ── */
@@ -645,7 +781,7 @@ section {
     padding: 0 1.5rem;
   }
   .hero-content { padding-top: 7rem; }
-  .hero-diagram { display: none; }
+  .hero-diagram { display: flex; padding: 0 0 3rem; }
   .hero-scroll  { left: 1.5rem; }
   .hero-name { font-size: clamp(3rem, 15vw, 5rem); }
 

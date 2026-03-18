@@ -96,6 +96,7 @@
   padding-bottom: 4rem;
   padding-top: 0;
   overflow: hidden;
+  position: relative;
 }
 
 .frame-hero-bg {
@@ -375,8 +376,8 @@
 .ph-01 { background: #000; }
 .ph-02 { background: #000; }
 .ph-03 { background: linear-gradient(135deg, #101010 0%, #1e1e1e 100%); }
-.ph-04 { background: linear-gradient(135deg, #100d00 0%, #1e1800 100%); }
-.ph-05 { background: linear-gradient(135deg, #001010 0%, #001a1a 100%); }
+.ph-04 { background: #000; }
+.ph-05 { background: #000; }
 
 /* ─── Grid layouts ─────────────────────────────────────────────────────────── */
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); }
@@ -444,6 +445,49 @@
   gap: 0.5rem;
   margin-top: 2rem;
 }
+
+/* ─── Lightbox ─────────────────────────────────────────────────────────────── */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,0.96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  cursor: zoom-out;
+}
+#lightbox.open {
+  opacity: 1;
+  pointer-events: all;
+}
+#lightbox img {
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+  display: block;
+  transform: scale(0.97);
+  transition: transform 0.35s ease;
+  cursor: default;
+}
+#lightbox.open img { transform: scale(1); }
+#lightbox-close {
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+  color: rgba(255,255,255,0.5);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+#lightbox-close:hover { color: #fff; }
+.lb-zoomable { cursor: zoom-in !important; }
 
 /* ─── Next project banner ──────────────────────────────────────────────────── */
 .frame-next {

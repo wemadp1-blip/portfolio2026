@@ -3,12 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yovie Cultural Center — Emanuele Di Paola</title>
+  <title>Yovie Cultural Center Emanuele Di Paola</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="project.css" />
+  <style>
+    .frame-hero-bg.ph-01 { opacity: 0.55; filter: grayscale(10%); }
+    .frame-hero:hover .frame-hero-bg.ph-01 { opacity: 0.65; }
+
+    /* Conveyor belt */
+    .model-conveyor {
+      overflow: hidden;
+      width: 100%;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .model-conveyor-track {
+      display: flex;
+      gap: 6px;
+      width: max-content;
+      animation: conveyorScroll 28s linear infinite;
+    }
+    .model-conveyor-track:hover { animation-play-state: paused; }
+    .model-conveyor-track img {
+      height: 520px;
+      width: auto;
+      object-fit: cover;
+      display: block;
+      flex-shrink: 0;
+    }
+    @keyframes conveyorScroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
 </head>
 <body>
 
@@ -21,14 +51,14 @@
       <span class="mono">All Work</span>
     </a>
     <div class="proj-nav-right">
-      <span class="proj-nav-index mono">01 / 12</span>
+      <span class="proj-nav-index mono">01 / 05</span>
       <a href="project-02.html" class="proj-nav-next mono">Next <span>→</span></a>
     </div>
   </nav>
 
-  <!-- Frame 01: Hero -->
+  <!-- Hero DSC_3297 used only here -->
   <section class="frame-hero">
-    <div class="frame-hero-bg ph-01" style="background-image:url('Links%20copy/DSC_3297.jpg');"></div>
+    <div class="frame-hero-bg ph-01" style="background-image:url('images/project-01/model/DSC_3386.jpg');background-size:cover;background-position:center;"></div>
     <div class="frame-hero-content">
       <div class="frame-hero-eyebrow">
         <span class="proj-number mono">Project 01</span>
@@ -54,18 +84,18 @@
         </div>
         <div class="hero-meta-item">
           <span class="hero-meta-label mono">Class</span>
-          <span class="hero-meta-value">Co'Lab — SCI-Arc</span>
+          <span class="hero-meta-value">Co'Lab SCI-Arc</span>
         </div>
       </div>
     </div>
     <div class="hero-scroll-hint mono">Scroll to explore</div>
   </section>
 
-  <!-- Frame 02: Overview -->
+  <!-- Overview -->
   <div class="frame-overview frame">
     <div>
       <p class="overview-label mono">Overview</p>
-      <p class="overview-statement">A performance hall that breaks its container — making structure and movement part of the performance itself.</p>
+      <p class="overview-statement">A performance hall that breaks its container making structure, material, and movement part of the performance itself.</p>
     </div>
     <div>
       <div class="spec-grid">
@@ -97,174 +127,184 @@
     </div>
   </div>
 
-  <!-- Frame 03: Concept Image -->
+  <!-- Concept -->
+  <div class="frame frame-auto">
+    <p class="frame-label mono">Concept</p>
+    <blockquote class="concept-quote">
+      "The construction lines share the same angular ratios as the acoustic propagation angles of the Goldener Saal geometry and acoustics become the same thing."
+    </blockquote>
+    <p class="frame-body" style="margin-top:3rem;max-width:60ch;">From this single geometric correspondence, the two auditoriums were sized and oriented. The building does not decorate structure it reveals it. Every material decision traces back to performance: acoustic plaster absorbs, oak panels diffuse, mesh filters light without sealing the street.</p>
+  </div>
+
+  <!-- ─── DRAWINGS ─────────────────────────────────────────────────────── -->
+
+  <!-- Full-bleed xray on black -->
   <div class="frame-image">
-    <div class="frame-image-inner" style="background-image:url('Links%20copy/Untitled-1-01.png');"></div>
+    <div class="frame-image-inner" style="background-image:url('images/project-01/drawings/3B_Balliet_SP25_Li_Mukai_Di Paola_Emanuele_DG_03.png');background-color:#000;background-size:contain;background-repeat:no-repeat;"></div>
     <div class="frame-image-caption">
-      <span class="caption-label mono">Concept Diagrams</span>
+      <span class="caption-label mono">Camera X-Ray Light Path Study</span>
       <span class="caption-label mono">Fig. 01</span>
     </div>
   </div>
 
-  <!-- Frame 04: Design Generator -->
+  <!-- X-Ray Process -->
+  <div class="frame frame-auto">
+    <p class="frame-label mono">Process Camera X-Ray</p>
+    <h2 class="frame-heading">From Object<br/>to Architecture</h2>
+    <p class="frame-body" style="max-width:60ch;margin-top:2rem;">The object was first built compositionally with an AI agent assembling camera components as an architectural study. The assembly was then modeled in 3D with actual camera parts and re-fed to a second AI agent, downloaded from GitHub, to generate the X-ray.</p>
+    <p class="frame-body" style="max-width:60ch;margin-top:1.5rem;">From the X-ray, the path of light through the camera's lens and mirror system was studied and compared to the behavior of sound in performance space. The angles of reflection in the camera's mirrors became the conceptual generator translated architecturally into how sound reflects, refracts, and amplifies through the auditorium volume.</p>
+  </div>
+
   <div class="frame frame-split">
     <div class="frame-split-left">
-      <p class="frame-label mono">Design Generator</p>
-      <h2 class="frame-heading">Geometry<br/>as Acoustics</h2>
-      <p class="frame-body">The construction lines share the same angular ratios as the acoustic propagation angles of the Goldener Saal in Vienna — one of the world's most precisely tuned concert halls.</p>
-      <p class="frame-body">The same geometric ratio governing optical behavior in the object governs acoustic behavior in the hall. From this correspondence, the two auditoriums were sized and oriented.</p>
-      <div class="material-list">
-        <div class="material-item">
-          <span class="material-name">Bansra-Phon Acoustic Plaster</span>
-          <span class="material-role mono">Cladding</span>
-        </div>
-        <div class="material-item">
-          <span class="material-name">European Oak Acoustic Panel</span>
-          <span class="material-role mono">Structural Framing</span>
-        </div>
-        <div class="material-item">
-          <span class="material-name">Wood Wool Acoustic Panels</span>
-          <span class="material-role mono">Interior</span>
-        </div>
-        <div class="material-item">
-          <span class="material-name">Austrian Wool Upholstery</span>
-          <span class="material-role mono">Seating</span>
-        </div>
-        <div class="material-item">
-          <span class="material-name">Natural Acoustic Plaster + Cork</span>
-          <span class="material-role mono">Underlayment</span>
-        </div>
-      </div>
+      <p class="frame-label mono">Plans + Sections</p>
+      <h2 class="frame-heading">Assembly<br/>Logic</h2>
+      <p class="frame-body">The plan reveals two auditoriums flanking a shared lobby atrium you enter at grade and see all levels simultaneously. The section shows how the long-span steel truss creates column-free performance volumes spanning the full building width.</p>
+      <p class="frame-body">Both drawings are governed by the same organisational spine: a central void that separates and connects the two performance halls.</p>
     </div>
-    <div class="frame-split-right">
-      <img src="Links%20copy/Untitled-1-02.png" alt="Plan and section diagrams showing acoustic geometry" style="width:100%;height:100%;min-height:600px;object-fit:cover;display:block;">
+    <div class="frame-split-right" style="background:#000;padding:0;overflow:hidden;">
+      <img src="images/project-01/drawings/3B_Balliet_SP25_Li_Mukai_Di Paola_Emanuele_LN_01_Page_1.png" alt="Plan two auditoriums flanking central atrium" style="width:100%;height:100%;min-height:600px;object-fit:contain;display:block;">
     </div>
   </div>
 
-  <!-- Frame 05: Plan -->
+  <div class="frame frame-auto">
+    <p class="frame-label mono">Section + Elevation</p>
+    <div class="two-col" style="gap:2px;margin-top:2rem;">
+      <div style="background:#000;">
+        <img src="images/project-01/drawings/3B_Balliet_SP25_Li_Mukai_Di Paola_Emanuele_LN_01_Page_2.png" alt="Section structural depth and programme" style="width:100%;height:auto;display:block;">
+      </div>
+      <div style="background:#000;">
+        <img src="images/project-01/drawings/3B_Balliet_SP25_Li_Mukai_Di Paola_Emanuele_LN_02.png" alt="Line drawing LN_02" style="width:100%;height:auto;display:block;">
+      </div>
+    </div>
+  </div>
+
+  <div class="frame frame-auto">
+    <p class="frame-label mono">Diagrams</p>
+    <div class="three-col" style="gap:2px;margin-top:2rem;">
+      <div style="background:#000;">
+        <img src="images/project-01/drawings/Diagram1-2_Page_1.png" alt="Diagram program distribution" style="width:100%;height:auto;display:block;">
+      </div>
+      <div style="background:#000;">
+        <img src="images/project-01/drawings/Diagram1-2_Page_2.png" alt="Diagram structural logic" style="width:100%;height:auto;display:block;">
+      </div>
+      <div style="background:#000;">
+        <img src="images/project-01/drawings/Diagram1-2_Page_3.png" alt="Diagram circulation" style="width:100%;height:auto;display:block;">
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── RENDERS ───────────────────────────────────────────────────────── -->
+
+  <div class="frame frame-split">
+    <div class="frame-split-left">
+      <p class="frame-label mono">Render</p>
+      <h2 class="frame-heading">Atmosphere<br/>and Form</h2>
+      <p class="frame-body">The auditorium interior is shaped by the same geometric logic as the building's exterior the acoustic geometry of the Goldener Saal is translated into the section's curvature and the ceiling's panelling rhythm.</p>
+      <p class="frame-body">At night, the structural frame reads through the mesh skin from outside, reversing the building's opacity.</p>
+    </div>
+    <div class="frame-split-right" style="padding:0;overflow:hidden;">
+      <img src="images/project-01/boards/image.png" alt="Render auditorium interior" style="width:100%;height:100%;min-height:600px;object-fit:cover;display:block;">
+    </div>
+  </div>
+
+  <div class="frame frame-auto">
+    <p class="frame-label mono">Additional Views</p>
+    <div class="two-col" style="margin-top:2rem;gap:2px;">
+      <div class="img-grid-item" style="aspect-ratio:4/3;">
+        <img src="images/project-01/boards/image (1).png" alt="Render interior view 02" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="img-grid-item" style="aspect-ratio:4/3;">
+        <img src="images/project-01/boards/image (1).jpeg" alt="Render interior view 03" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── PRESENTATION BOARDS ──────────────────────────────────────────── -->
+
+  <div class="frame frame-auto">
+    <p class="frame-label mono">Presentation Boards</p>
+    <h2 class="frame-heading">Final<br/>Submission</h2>
+    <p class="frame-body" style="max-width:55ch;margin-bottom:3rem;">The final submission boards covering site context, structural assembly, façade system, egress strategy, and mass motion analysis.</p>
+    <div class="two-col" style="margin-bottom:2px;gap:2px;">
+      <div class="img-grid-item" style="aspect-ratio:3/2;">
+        <img src="images/project-01/boards/3B_Balliet_SP25_Li_Mukai_Di Paola_Emanuele_MP_06.jpg" alt="Board 06 isometric overview" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="img-grid-item" style="aspect-ratio:3/2;">
+        <img src="images/project-01/boards/3B_Balliet_SP25_Li_Mukai_Di Paola_Emanuele_MP_07.jpg" alt="Board 07 façade detail" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+    </div>
+    <div class="three-col" style="gap:2px;">
+      <div class="img-grid-item" style="aspect-ratio:3/2;">
+        <img src="images/project-01/boards/3B_Balliet_SP25_Li_Mukai_Di Paola_Emanuele_MP_08.jpg" alt="Board 08 first floor exit strategy" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="img-grid-item" style="aspect-ratio:3/2;">
+        <img src="images/project-01/boards/3B_Balliet_SP25_Li_Mukai_Di Paola_Emanuele_MP_09.jpg" alt="Board 09 upper floor exit strategy" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="img-grid-item" style="aspect-ratio:3/2;">
+        <img src="images/project-01/boards/3B_Balliet_SP25_Li_Mukai_Di Paola_Emanuele_MP_10.jpg" alt="Board 10 mass motion diagram" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── MODEL PHOTOS ──────────────────────────────────────────────────── -->
+
+  <!-- Full-bleed DSC_3353 used only here -->
   <div class="frame-image">
-    <div class="frame-image-inner" style="background-image:url('Links%20copy/Untitled-1-03.png');"></div>
+    <div class="frame-image-inner" style="background-image:url('images/project-01/model/DSC_3353.jpg');"></div>
     <div class="frame-image-caption">
-      <span class="caption-label mono">Plan</span>
+      <span class="caption-label mono">Physical Model Overview</span>
       <span class="caption-label mono">Fig. 02</span>
     </div>
   </div>
 
-  <!-- Frame 06: Section + Systems -->
+  <!-- Split feature DSC_3409 used only here -->
   <div class="frame frame-split">
     <div class="frame-split-left">
-      <p class="frame-label mono">Section</p>
-      <h2 class="frame-heading">Structure<br/>Made Visible</h2>
-      <p class="frame-body">The section reveals the full depth of the building system — photovoltaic glass roof panels sit above the primary steel truss, which descends through the auditorium to the concrete slab below.</p>
-      <p class="frame-body">The building's interior is a performance of structure: exposed trusses, layered glazing, and shifting floor plates create a space that is simultaneously infrastructure and stage.</p>
-      <div class="material-list">
-        <div class="material-item">
-          <span class="material-name">Steel Truss</span>
-          <span class="material-role mono">Primary Structure</span>
-        </div>
-        <div class="material-item">
-          <span class="material-name">Photovoltaic Glass Roof</span>
-          <span class="material-role mono">Envelope</span>
-        </div>
-        <div class="material-item">
-          <span class="material-name">Linoleum + Glass Flooring</span>
-          <span class="material-role mono">Interior Floor</span>
-        </div>
-        <div class="material-item">
-          <span class="material-name">Office Cladding</span>
-          <span class="material-role mono">Secondary Skin</span>
-        </div>
-      </div>
+      <p class="frame-label mono">Physical Model</p>
+      <h2 class="frame-heading">Built at<br/>1/8″ Scale</h2>
+      <p class="frame-body">The model makes the building's fractured logic tangible two auditorium volumes held within a single structural frame, separated by the central lobby void. The steel truss reads as a spine from which everything else hangs.</p>
+      <p class="frame-body">At this scale the mesh façade becomes a texture the building dematerialises at its edges and condenses at its structural core.</p>
     </div>
-    <div class="frame-split-right">
-      <img src="Links%20copy/Untitled-1-04.png" alt="Building section revealing truss, glazing, and floor systems" style="width:100%;height:100%;min-height:600px;object-fit:cover;display:block;">
+    <div class="frame-split-right" style="padding:0;overflow:hidden;">
+      <img src="images/project-01/model/DSC_3409.jpg" alt="Physical model structural detail" style="width:100%;height:100%;min-height:600px;object-fit:cover;display:block;">
     </div>
   </div>
 
-  <!-- Frame 07: Chunk Selection -->
-  <div class="frame frame-auto">
-    <p class="frame-label mono">Construction Details — Chunk Selection</p>
-    <h2 class="frame-heading">Three Chunks,<br/>Three Systems</h2>
-    <p class="frame-body" style="margin-bottom:3rem;">Three construction chunks were selected to resolve the building's most complex intersections: the roof edge, the mesh facade, the glass canopy, and the auditorium seating wall.</p>
-    <div class="two-col">
-      <div class="img-grid-item">
-        <img src="Links%20copy/Untitled-1-05.png" alt="Chunk A — Roof Edge, Mesh Façade, and Glass Canopy detail" style="width:100%;height:100%;object-fit:cover;display:block;">
-      </div>
-      <div class="img-grid-item">
-        <img src="Links%20copy/Untitled-1-11.png" alt="Chunk B — construction detail drawing" style="width:100%;height:100%;object-fit:cover;display:block;">
-      </div>
-      <div class="img-grid-item">
-        <img src="Links%20copy/Untitled-1-12.png" alt="Chunk C — Auditorium Seating and Wall detail" style="width:100%;height:100%;object-fit:cover;display:block;">
-      </div>
-      <div class="img-grid-item">
-        <img src="Links%20copy/3B_Balliet_SP25_Li_Mukai_Di%20Paola_Emanuele_MP_06.jpg" alt="Isometric overview — axonometric of full building assembly" style="width:100%;height:100%;object-fit:cover;display:block;">
-      </div>
+  <!-- Conveyor belt remaining 5 model photos, each used once -->
+  <div class="frame frame-auto" style="padding-bottom:0;">
+    <p class="frame-label mono">Model All Views</p>
+  </div>
+  <div class="model-conveyor">
+    <div class="model-conveyor-track">
+      <!-- Set 1 -->
+      <img src="images/project-01/model/DSC_3307.jpg" alt="Model view 01">
+      <img src="images/project-01/model/DSC_3320.jpg" alt="Model view 02">
+      <img src="images/project-01/model/DSC_3297.jpg" alt="Model view 03">
+      <img src="images/project-01/model/DSC_3625.jpg" alt="Model view 04">
+      <img src="images/project-01/model/DSC_3626.jpg" alt="Model view 05">
+      <!-- Set 2 duplicate for seamless loop -->
+      <img src="images/project-01/model/DSC_3307.jpg" alt="Model view 01">
+      <img src="images/project-01/model/DSC_3320.jpg" alt="Model view 02">
+      <img src="images/project-01/model/DSC_3297.jpg" alt="Model view 03">
+      <img src="images/project-01/model/DSC_3625.jpg" alt="Model view 04">
+      <img src="images/project-01/model/DSC_3626.jpg" alt="Model view 05">
     </div>
   </div>
 
-  <!-- Frame 08: Facade -->
-  <div class="frame frame-split">
-    <div class="frame-split-left">
-      <p class="frame-label mono">Façade</p>
-      <h2 class="frame-heading">A City<br/>Reflected</h2>
-      <p class="frame-body">The façade responds directly to the dense Viennese urban fabric surrounding the site. Existing building elevations were studied and abstracted into the cladding system.</p>
-      <p class="frame-body">The building is simultaneously a new object within the city and a surface that reflects it back — a mirror-mask that belongs to its context by distorting it.</p>
-      <div class="steps-list">
-        <div class="step-item">
-          <span class="step-num mono">A</span>
-          <span class="step-text">Slab Edge and Glass Canopy — SCALE 1″ = 1′-0″</span>
-        </div>
-        <div class="step-item">
-          <span class="step-num mono">B</span>
-          <span class="step-text">Roof Parapet and Mesh Termination — SCALE 1″ = 1′-0″</span>
-        </div>
-        <div class="step-item">
-          <span class="step-num mono">C</span>
-          <span class="step-text">Auditorium Seating and Wall — SCALE 1″ = 0′-6″</span>
-        </div>
-      </div>
-    </div>
-    <div class="frame-split-right">
-      <img src="Links%20copy/3B_Balliet_SP25_Li_Mukai_Di%20Paola_Emanuele_MP_07.jpg" alt="Façade presentation board — metal mesh and steel framing detail" style="width:100%;height:100%;min-height:600px;object-fit:cover;display:block;">
-    </div>
-  </div>
-
-  <!-- Frame 09: Circulation -->
-  <div class="frame frame-auto">
-    <p class="frame-label mono">Circulation Strategy</p>
-    <h2 class="frame-heading">Movement as<br/>Performance</h2>
-    <p class="frame-body" style="max-width:60ch;margin-bottom:3rem;">The exit strategy is layered across three floors. Double elevators connect to the first floor; the auditorium seating cascades toward the stage in a continuous raked section that doubles as escape route.</p>
-    <div class="three-col">
-      <div class="img-grid-item">
-        <img src="Links%20copy/3B_Balliet_SP25_Li_Mukai_Di%20Paola_Emanuele_MP_08.jpg" alt="First floor exit strategy diagram" style="width:100%;height:100%;object-fit:cover;display:block;">
-      </div>
-      <div class="img-grid-item">
-        <img src="Links%20copy/3B_Balliet_SP25_Li_Mukai_Di%20Paola_Emanuele_MP_09.jpg" alt="Second and third floor exit strategy diagram" style="width:100%;height:100%;object-fit:cover;display:block;">
-      </div>
-      <div class="img-grid-item">
-        <img src="Links%20copy/3B_Balliet_SP25_Li_Mukai_Di%20Paola_Emanuele_MP_10.jpg" alt="Mass motion diagram — crowd flow through building" style="width:100%;height:100%;object-fit:cover;display:block;">
-      </div>
-    </div>
-  </div>
-
-  <!-- Frame 11: Model Details -->
-  <div class="frame frame-auto">
-    <p class="frame-label mono">Model</p>
-    <p class="frame-body" style="margin-bottom:3rem;max-width:55ch;">A process of construction and reflection. Translating architectural ideas into material performance. The model captures the project's central idea: a fractured container where performance, structure, and circulation collide.</p>
-    <div class="two-col">
-      <div class="img-grid-item" style="aspect-ratio:3/2;">
-        <img src="Links%20copy/DSC_3307.jpg" alt="Physical model — concept view showing fractured container" style="width:100%;height:100%;object-fit:cover;display:block;">
-      </div>
-      <div class="img-grid-item" style="aspect-ratio:3/2;">
-        <img src="Links%20copy/DSC_3320.jpg" alt="Physical model — section view revealing structure and movement" style="width:100%;height:100%;object-fit:cover;display:block;">
-      </div>
-    </div>
-  </div>
-
-  <!-- Frame 12: Next Project -->
-  <a href="project-02.html" class="frame-next">
+  <!-- Technical Detail Link -->
+  <a href="project-01-detail.html" class="frame-next">
     <div>
-      <p class="frame-next-label mono">Next Project — 02</p>
+      <p class="frame-next-label mono">In-Depth Documentation</p>
+      <h2 class="frame-next-title">Technical<br/>Analysis</h2>
+    </div>
+    <span class="frame-next-arrow">↗</span>
+  </a>
+
+  <!-- Next Project -->
+  <a href="project-02.html" class="frame-next" style="border-top:none;">
+    <div>
+      <p class="frame-next-label mono">Next Project 02</p>
       <h2 class="frame-next-title">Spiral<br/>Staircase</h2>
     </div>
     <span class="frame-next-arrow">↗</span>
